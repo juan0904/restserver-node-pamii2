@@ -21,6 +21,7 @@ class Server {
         this.brandProvidersPath = '/api/brand_providers';
         this.productsPath = '/api/bp';
         this.parametrosPath = '/api/par';
+        this.heroesPath = '/api/heroes';
 
 
         // Middlewares
@@ -71,6 +72,8 @@ class Server {
         this.app.use( this.parametrosPath, require('../routes/parametros'));
 
         this.app.use( this.paths.uploads, require('../routes/uploads'));
+        this.app.use( this.heroesPath, require('../routes/heroes'));
+
     }
 
     listen() {
