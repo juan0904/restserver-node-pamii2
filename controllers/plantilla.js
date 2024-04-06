@@ -103,7 +103,24 @@ try {
         console.log(error);
     }
 
+    console.log("AQUI LLEGO....0")
 
+  
+    /*
+    <Consulta>
+                          <NombreConexion>Unoee_Quest_Real</NombreConexion>
+                          <IdCia>1</IdCia>
+                          <IdProveedor>PAMII</IdProveedor>
+                          <IdConsulta>RPS_CONSULTA_CATALOGO_VEO_V2</IdConsulta>
+                          <Usuario>integracion.pamii</Usuario>
+                          <Clave>R.W]@1IXf0</Clave>   
+                          <Parametros>
+                                                               </Parametros>                  
+      </Consulta>
+    */
+
+
+    //???
     let datos = await Remote.loadQuest(
         'Unoee_Quest_real',
         '1',
@@ -113,6 +130,8 @@ try {
         'R.W]@1IXf0'
     );
 
+
+    console.log("AQUI LLEGO....1")
 
     const resultado = datos['soap:Body']['EjecutarConsultaXMLResponse']['EjecutarConsultaXMLResult']['diffgr:diffgram']['NewDataSet']['Resultado'];
 
@@ -245,7 +264,8 @@ try {
 
     try {
         //var anBrandProviderId = 2;
-        var anImageURL = 'https://ftp.quest.com.co/imagenes/';
+        var anImageURL = 'https://ftp.quest.com.co/imagenes/QUEST/ECOMMERCE/';
+        //var anImageURL = 'https://ftp.quest.com.co/imagenes/';
         var query = "CALL brand_provider_procedure(:anBrandProviderId,:anImageURL)";
 
         //await bdmysqlRDS.query(query, { replacements: { anBrandProviderId: anBrandProviderId, anImageURL: anImageURL } });

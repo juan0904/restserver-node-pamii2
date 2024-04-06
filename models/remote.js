@@ -5,7 +5,15 @@ const ApiClient = require("./api-client");
 
 const Parser = require("./parser");
 
-const url = `http://169.55.98.188:8043/WSUNOEE/WSUNOEE.asmx`;
+
+/*
+    Webservices: https://wsquest.siesacloud.com:8043/WSUNOEE/WSUNOEE.WSDL
+    Asmx: https://wsquest.siesacloud.com:8043/WSUNOEE/WSUNOEE.asmx
+*/
+
+//???
+//const url = `http://169.55.98.188:8043/WSUNOEE/WSUNOEE.asmx`;
+const url = `https://wsquest.siesacloud.com:8043/WSUNOEE/WSUNOEE.asmx`;
 
 module.exports = class Remote {
 
